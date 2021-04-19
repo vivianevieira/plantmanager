@@ -1,7 +1,8 @@
 import React from 'react';
-import { SafeAreaView, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { SafeAreaView, Text, Image, StyleSheet } from 'react-native';
 
 import wateringImg from '../assets/watering.png';
+import { Button } from '../components/Button';
 import colors from '../styles/colors';
 
 export function Welcome() {
@@ -20,11 +21,8 @@ export function Welcome() {
         sempre que precisar.
       </Text>
 
-      <TouchableOpacity style={styles.button} activeOpacity={0.7}>
-        <Text style={styles.buttonText}>
-          >
-        </Text>
-      </TouchableOpacity>
+    <Button title=">"/>
+
     </SafeAreaView>
   );
 }
