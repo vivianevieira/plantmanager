@@ -28,7 +28,7 @@ import fonts from '../styles/fonts';
         </Text>
 
         <View style={styles.footer}>
-          <Button />
+          <Button title="Começar"/>
         </View>
       </View>
     </SafeAreaView>
