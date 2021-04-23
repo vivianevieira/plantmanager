@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   StyleSheet,
-  Text
+  Text,
+  View
 } from 'react-native';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 import { SvgFromUri } from 'react-native-svg';
@@ -13,36 +14,63 @@ interface PlantProps extends RectButtonProps {
   data: {
     name: string;
     photo: string;
+    hour: string;
   }
 }
 
-export const PlantCardPrimary = ({ data, ...rest }: PlantProps) => {
+export const PlantCardSecondary  = ({ data, ...rest }: PlantProps) => {
   return (
     <RectButton
       style={styles.container}
       {...rest}
     >
-      <SvgFromUri uri={data.photo} width={70} height={70} />
-      <Text style={styles.text}>
+      <SvgFromUri uri={data.photo} width={50} height={50} />
+      <Text style={styles.title}>
         { data.name }
       </Text>
+
+      <View style={styles.details}>
+        <Text style={styles.timeLabel}>
+          Regar às
+        </Text>
+        <Text style={styles.time}>
+          {data.hour}
+        </Text>
+      </View>
     </RectButton>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    maxWidth: '45%',
-    backgroundColor: colors.shape,
+    width: '100%',
+    paddingHorizontal: 10,
+    paddingVertical: 25,
     borderRadius: 20,
-    paddingVertical: 10,
+    flexDirection: 'row',
     alignItems: 'center',
-    margin: 10
+    backgroundColor: colors.shape,
+    marginVertical: 5
   },
-  text: {
-    color: colors.green_dark,
+  title: {
+    flex: 1,
+    marginLeft: 10,
     fontFamily: fonts.heading,
-    marginVertical: 16
+    fontSize: 17,
+    color: colors.heading
+  },
+  details: {
+    alignItems: 'flex-end'
+  },
+  timeLabel: {
+    fontSize: 16,
+    fontFamily: fonts.text,
+    color: colors.body_light
+  },
+  time: {
+    marginTop: 5,
+    fontSize: 16,
+    fontFamily: fonts.heading,
+    color: colors.body_dark
   }
 });
