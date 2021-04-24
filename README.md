@@ -12,4 +12,5 @@
 * AsyncStorage
 * Date Time Picker
 * Tab Navigation
+* Gesture Hanlder (Swipeable)
 * Expo Notifications API
