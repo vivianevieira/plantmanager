@@ -14,3 +14,10 @@
 * Tab Navigation
 * Gesture Hanlder (Swipeable)
 * Expo Notifications API
+
+
+<img src="https://viviane-documents.s3-us-west-2.amazonaws.com/plant_manager_animation.gif" />
+</ br>
+<img src="https://viviane-documents.s3-us-west-2.amazonaws.com/plant-manager-animation2.gif" />
+
+![Swipe image](https://viviane-documents.s3-us-west-2.amazonaws.com/plant_manager_swipe.jpeg)
